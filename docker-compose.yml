@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  api:
+    image: node
+    env_file:
+      - ./.env
+    ports:
+      - ${APIPORT}:${APIPORT}
+    tty: true
+    stdin_open: true
+    working_dir: /app/estudo-graphql
+    volumes:
+      - ./:/app/estudo-graphql
