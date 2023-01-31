@@ -16,10 +16,13 @@
     "eslint": "^8.33.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.6.0"
   },
   "dependencies": {
     "express": "^4.18.2",
+    "mysql2": "^3.1.0",
+    "sequelize": "^6.28.0",
     "winston": "^3.8.2"
   }
 }

@@ -12,3 +12,12 @@ services:
     working_dir: /app/estudo-graphql
     volumes:
       - ./:/app/estudo-graphql
+    depends_on:
+      - db
+  db:
+    image: mysql
+    ports:
+      - ${DBPORT}:${DBPORT}
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DBPASSWORD}
+    restart: always
