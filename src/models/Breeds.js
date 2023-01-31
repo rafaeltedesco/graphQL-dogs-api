@@ -7,7 +7,10 @@ const BreedSchema = (sequelize, DataTypes) => {
   });
 
   Breed.associate = ({ Dog }) => {
-    Breed.hasMany(Dog);
+    Breed.hasMany(Dog, {
+      as: 'dogs',
+      foreignKey: 'breedId',
+    });
   };
 
   return Breed;

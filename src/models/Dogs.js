@@ -9,7 +9,10 @@ const DogSchema = (sequelize, DataTypes) => {
   });
 
   Dog.associate = ({ Breed }) => {
-    Dog.belongsTo(Breed);
+    Dog.belongsTo(Breed, {
+      as: 'breed',
+      foreignKey: 'breedId',
+    });
   };
 
   return Dog;
