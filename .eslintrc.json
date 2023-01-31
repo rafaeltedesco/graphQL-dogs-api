@@ -11,6 +11,12 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        "no-unused-vars": ["error", { "varIgnorePattern": ["_Sequelize"]}]
-    }
+
+    },
+    "ignorePatterns": [
+        "**/seeders/**",
+        "**/migrations/**",
+        "**/seeders/**",
+        "**/models/index.js"
+    ]
 }

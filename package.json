@@ -8,6 +8,7 @@
     "dev": "nodemon .",
     "db:restart": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
     "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
