@@ -7,6 +7,8 @@ const sequelizeConfig = {
   dialect: process.env.DBDIALECT,
 };
 
+console.log(sequelizeConfig);
+
 module.exports = {
   development: sequelizeConfig,
   test: sequelizeConfig,

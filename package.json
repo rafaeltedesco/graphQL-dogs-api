@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon .",
+    "db:restart": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
     "lint": "eslint . --ext .js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
