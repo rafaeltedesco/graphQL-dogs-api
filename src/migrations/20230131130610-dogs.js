@@ -1,6 +1,6 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Dogs', {
       id: {
         type: Sequelize.INTEGER,
@@ -13,7 +13,7 @@ module.exports = {
         allowNull: false,
         references: {
           model: 'Breeds',
-          foreignKey: 'id'
+          foreignKey: 'id',
         },
         field: 'breed_id',
         onDelete: 'CASCADE',
@@ -26,11 +26,11 @@ module.exports = {
       age: {
         type: Sequelize.INTEGER,
         allowNull: false,
-      }
-    })
+      },
+    });
   },
 
-  async down (queryInterface, _Sequelize) {
+  async down(queryInterface, _Sequelize) {
     await queryInterface.dropTable('Dogs');
-  }
+  },
 };

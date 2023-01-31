@@ -1,25 +1,23 @@
-'use strict';
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, _Sequelize) {
+  async up(queryInterface, _Sequelize) {
     await queryInterface.bulkInsert('Breeds', [
       {
-        name: "Bullmastiff"
+        name: 'Bullmastiff',
       },
       {
-        name: "Ratonero Murciano de Huerta"
+        name: 'Ratonero Murciano de Huerta',
       },
       {
-        name:"English Springer Spaniel"
+        name: 'English Springer Spaniel',
       },
       {
-        name:"Podenco Valenciano"
-      }
-    ])
+        name: 'Podenco Valenciano',
+      },
+    ]);
   },
 
-  async down (queryInterface, _Sequelize) {
+  async down(queryInterface, _Sequelize) {
     await queryInterface.bulkDelete('Breeds');
-  }
+  },
 };

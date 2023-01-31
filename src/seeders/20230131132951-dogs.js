@@ -1,43 +1,41 @@
-'use strict';
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, _Sequelize) {
+  async up(queryInterface, _Sequelize) {
     await queryInterface.bulkInsert('Dogs', [
       {
-        name: "Heath",
+        name: 'Heath',
         age: 4,
-        breed_id: 1 
+        breed_id: 1,
       },
       {
-        name: "Toy",
+        name: 'Toy',
         age: 7,
-        breed_id: 2 
+        breed_id: 2,
       },
       {
-        name: "Mack",
+        name: 'Mack',
         age: 1,
-        breed_id: 3 
+        breed_id: 3,
       },
       {
-        name: "Cedrick",
+        name: 'Cedrick',
         age: 10,
-        breed_id: 4 
+        breed_id: 4,
       },
       {
-        name: "Raleigh",
+        name: 'Raleigh',
         age: 8,
-        breed_id: 1 
+        breed_id: 1,
       },
       {
-        name: "Jeremie",
+        name: 'Jeremie',
         age: 2,
-        breed_id: 3
-      }
-    ])
+        breed_id: 3,
+      },
+    ]);
   },
 
-  async down (queryInterface, _Sequelize) {
-    await queryInterface.bulkDelete('Dogs')
-  }
+  async down(queryInterface, _Sequelize) {
+    await queryInterface.bulkDelete('Dogs');
+  },
 };
